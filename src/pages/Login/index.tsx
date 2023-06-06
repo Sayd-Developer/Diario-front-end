@@ -1,11 +1,11 @@
-import { Container, ContainerLogin, ContainerImgLogin } from "./style"
+import { Container, ContainerInput, ContainerImg } from "./style"
 
-import UserLogin from "../../assets/icons/iconUserLogin.svg"
+import DarkLogin from "../../assets/icons/iconDarkLogin.svg"
 import KeyLogin from "../../assets/icons/iconKeyLogin.svg"
-import Styled_1 from "../../assets/icons/iconStyled_1.svg"
+import UserLogin from "../../assets/icons/iconUserLogin.svg"
 import { useState } from "react"
 
-const Login = () => {
+export default function Login() {
   const [name, setName] = useState("")
 
   const ChangeNumber = () => {
@@ -16,28 +16,24 @@ const Login = () => {
 
   return (
     <Container>
-      <ContainerLogin>
-        <label htmlFor="">
-          <h1>Login</h1>
+      <ContainerInput>
+        <h1>Login</h1>
+        <h3>
+          Desvende sua história,
+          <br /> uma página por vez.
+        </h3>
+        <label htmlFor="" className="User">
           <img src={UserLogin} alt="" />
-          <input
-            type="text"
-            placeholder="Digite seu e-mail"
-            onChange={(e) => setName(e.target.value)}
-          />
+          <input type="text" />
         </label>
-        <label htmlFor="">
+        <label htmlFor="" className="Key">
           <img src={KeyLogin} alt="" />
           <input type="text" />
         </label>
-        <p>Esqueceu sua senha? Clique Aqui</p>
-        <button></button>
-        <ContainerImgLogin>
-          <img src={Styled_1} alt="" />
-        </ContainerImgLogin>
-      </ContainerLogin>
+      </ContainerInput>
+      <ContainerImg>
+        <img src={DarkLogin} alt="" />
+      </ContainerImg>
     </Container>
   )
 }
-
-export default Login
