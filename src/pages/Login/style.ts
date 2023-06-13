@@ -1,42 +1,58 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-  width: 100%;
+  margin: 0;
   height: 100vh;
-  display: flex;
-  background-color: #131313;
+  width: 100vw;
   color: white;
+  display: flex;
 `
-export const ContainerInput = styled.div`
+export const ContainerContent = styled.div`
+  background-color: #131313;
   width: 50vw;
-  height: 50vh;
+  height: 100vh;
+`
+export const ContainerHeader = styled.div`
+  justify-content: center;
+`
+export const ContainerBody = styled.div`
+  input {
+    width: 486px;
+    height: 75px;
+    left: 131px;
+    top: 528px;
 
-  h1 {
-    font-size: 30px;
+    border: 3px solid #ddc2dc;
+    border-radius: 20px;
+    background-color: #131313;
   }
 
-  .User {
+  img {
     left: 10.58%;
     right: 88.1%;
     top: 48.17%;
     bottom: 49.29%;
   }
+`
+export const ContainerFooter = styled.div`
+  button {
+    width: 238px;
+    height: 70px;
+    left: 131px;
+    top: 694px;
 
-  .Key {
-    color: #ffffff;
-    left: 10.45%;
-    right: 88.03%;
-    top: 56.52%;
-    bottom: 41.24%;
+    background: #ffffff;
+    border-radius: 20px;
+    border: none;
+    color: #131313;
+    font-weight: 700;
+    font-size: 20px;
   }
 `
 export const ContainerImg = styled.div`
-  width: 50vw;
-  height: 50vh;
   img {
-    width: 710px;
-    height: 719.77px;
-    left: 780px;
-    top: 131px;
+    background-color: white;
+    height: 100vh;
+    width: 50vw;
   }
 `

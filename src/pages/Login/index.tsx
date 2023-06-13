@@ -1,4 +1,11 @@
-import { Container, ContainerInput, ContainerImg } from "./style"
+import {
+  Container,
+  ContainerBody,
+  ContainerImg,
+  ContainerHeader,
+  ContainerFooter,
+  ContainerContent,
+} from "./style"
 
 import DarkLogin from "../../assets/icons/iconDarkLogin.svg"
 import KeyLogin from "../../assets/icons/iconKeyLogin.svg"
@@ -16,21 +23,30 @@ export default function Login() {
 
   return (
     <Container>
-      <ContainerInput>
-        <h1>Login</h1>
-        <h3>
-          Desvende sua história,
-          <br /> uma página por vez.
-        </h3>
-        <label htmlFor="" className="User">
-          <img src={UserLogin} alt="" />
-          <input type="text" />
-        </label>
-        <label htmlFor="" className="Key">
-          <img src={KeyLogin} alt="" />
-          <input type="text" />
-        </label>
-      </ContainerInput>
+      <ContainerContent>
+        <ContainerHeader>
+          <h1>
+            <strong>Login</strong>
+          </h1>
+          <h1>Desvende sua história, uma página por vez.</h1>
+        </ContainerHeader>
+        <ContainerBody>
+          <label htmlFor="">
+            <img src={UserLogin} alt="" />
+            <input type="text" />
+          </label>
+
+          <label htmlFor="">
+            <img src={KeyLogin} alt="" />
+            <input type="password" />
+          </label>
+          <h3>Esqueceu sua senha? Clique Aqui</h3>
+        </ContainerBody>
+        <ContainerFooter>
+          <button>Entrar</button>
+        </ContainerFooter>
+      </ContainerContent>
+
       <ContainerImg>
         <img src={DarkLogin} alt="" />
       </ContainerImg>
