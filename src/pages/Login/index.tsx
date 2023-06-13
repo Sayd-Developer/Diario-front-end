@@ -25,10 +25,12 @@ export default function Login() {
     <Container>
       <ContainerContent>
         <ContainerHeader>
-          <h1>
-            <strong>Login</strong>
-          </h1>
-          <h1>Desvende sua história, uma página por vez.</h1>
+          <h1>Login</h1>
+          <h2>
+            Desvende sua história, uma
+            <br />
+            página por vez.
+          </h2>
         </ContainerHeader>
         <ContainerBody>
           <label htmlFor="">
