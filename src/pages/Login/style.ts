@@ -11,16 +11,23 @@ export const ContainerContent = styled.div`
   background-color: #131313;
   width: 50vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 export const ContainerHeader = styled.div`
-  justify-content: center;
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 20px;
+  }
 `
 export const ContainerBody = styled.div`
   input {
-    width: 486px;
-    height: 75px;
-    left: 131px;
-    top: 528px;
+    box-sizing: border-box;
+    width: 406px;
+    height: 55px;
 
     border: 3px solid #ddc2dc;
     border-radius: 20px;
@@ -33,19 +40,21 @@ export const ContainerBody = styled.div`
     top: 48.17%;
     bottom: 49.29%;
   }
+
+  h3 {
+    font-size: 10px;
+  }
 `
 export const ContainerFooter = styled.div`
   button {
-    width: 238px;
-    height: 70px;
-    left: 131px;
-    top: 694px;
-
+    width: 198px;
+    height: 50px;
     background: #ffffff;
-    border-radius: 20px;
+
+    border-radius: 12px;
     border: none;
     color: #131313;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 20px;
   }
 `
