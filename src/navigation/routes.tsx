@@ -24,7 +24,11 @@ const Home = lazy(() => import("../pages/Home"))
 export const routes = [
   {
     element: <LayoutLogin />,
-    children: [{ path: "/login", element: Private(Login) }],
+    children: [{ path: "/", element: Private(Login) }],
+  },
+  {
+    element: <LayoutLogin />,
+    children: [{ path: "/Login", element: Private(Login) }],
   },
   {
     element: <LayoutHome />,

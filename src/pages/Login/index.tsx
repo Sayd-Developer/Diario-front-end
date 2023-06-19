@@ -13,6 +13,7 @@ import DarkLogin from "../../assets/icons/iconDarkLogin.svg"
 import KeyLogin from "../../assets/icons/iconKeyLogin.svg"
 import UserLogin from "../../assets/icons/iconUserLogin.svg"
 import { useState } from "react"
+import { useNavigate } from "react-router"
 
 export default function Login() {
   const [name, setName] = useState("")
@@ -22,6 +23,8 @@ export default function Login() {
     setName((previName) => previName + "")
     setName(name + "")
   }
+
+  const navigate = useNavigate()
 
   return (
     <Container>
@@ -47,7 +50,7 @@ export default function Login() {
 
             <h3>Esqueceu sua senha? Clique Aqui</h3>
           </ContainerBody>
-          <ContainerFooter>
+          <ContainerFooter onClick={() => navigate("/inicio")}>
             <button>Entrar</button>
           </ContainerFooter>
         </ContainerContent>
