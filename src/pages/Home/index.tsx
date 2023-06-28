@@ -1,3 +1,5 @@
+import { Container } from "./style"
+
 export default function Home() {
   return (
     <div>

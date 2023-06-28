@@ -42,6 +42,6 @@ export const routes = [
   },
   {
     element: <LayoutSalve />,
-    children: [{ path: "/Salvo  ", element: Private(Salve) }],
+    children: [{ path: "/Salvo", element: Private(Salve) }],
   },
 ]
