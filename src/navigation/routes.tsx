@@ -34,7 +34,7 @@ export const routes = [
   },
   {
     element: <LayoutHome />,
-    children: [{ path: "/inicio", element: Private(Home) }],
+    children: [{ path: "/Inicio", element: Private(Home) }],
   },
   {
     element: <LayoutAnnotation />,
