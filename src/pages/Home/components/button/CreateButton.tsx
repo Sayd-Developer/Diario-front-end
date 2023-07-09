@@ -6,6 +6,7 @@ interface CreateButtonProps {
 export default function CreateButton({ fill, onClick }: CreateButtonProps) {
   return (
     <svg
+      style={{ cursor: "pointer" }}
       onClick={onClick}
       width="80"
       height="80"
