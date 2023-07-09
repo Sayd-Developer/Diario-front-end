@@ -1,7 +1,4 @@
-import LayoutAnnotation from "../layouts/LayoutAnnotation";
-import LayoutHome from "../layouts/LayoutHome/LayoutHome";
-import LayoutLogin from "../layouts/LayoutLogin";
-import LayoutSalve from "../layouts/LayoutSalve";
+import LayoutApp from "../layouts/LayoutHome/LayoutHome";
 import { lazy } from "react";
 
 const Login = lazy(() => import("../pages/Login"));
@@ -14,20 +11,13 @@ function Private(Component: React.FC) {
 }
 
 export const routes = [
+  { children: [{ path: "/login", element: Private(Login) }] },
   {
-    element: <LayoutLogin />,
-    children: [{ path: "/login", element: Private(Login) }],
+    element: <LayoutApp />,
+    children: [
+      { path: "/", element: Private(Home) },
+      { path: "/anotacao", element: Private(Annotation) },
+    ],
   },
-  {
-    element: <LayoutHome />,
-    children: [{ path: "/", element: Private(Home) }],
-  },
-  {
-    element: <LayoutAnnotation />,
-    children: [{ path: "/anotacao", element: Private(Annotation) }],
-  },
-  {
-    element: <LayoutSalve />,
-    children: [{ path: "/salvo", element: Private(Salve) }],
-  },
+  { children: [{ path: "/salvo", element: Private(Salve) }] },
 ];

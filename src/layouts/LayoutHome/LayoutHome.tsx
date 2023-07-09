@@ -1,12 +1,12 @@
 import Sidebar from "../../components/Sidebar";
-import Home from "../../pages/Home";
 import { TemplateHome } from "./styles";
+import { Outlet } from "react-router-dom";
 
-export default function LayoutHome() {
+export default function LayoutApp() {
   return (
     <TemplateHome>
       <Sidebar />
-      <Home />
+      <Outlet />
     </TemplateHome>
   );
 }

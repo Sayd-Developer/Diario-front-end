@@ -1,10 +1,8 @@
-import Sidebar from "../../components/Sidebar"
-import { Container, ContainerContent, Header, Body, Low } from "./style"
+import { Container, ContainerContent, Header, Body, Low } from "./style";
 
 export default function Annotation() {
   return (
     <Container>
-      <Sidebar />
       <ContainerContent>
         <Header>
           <img src="" alt="" />
@@ -19,5 +17,5 @@ export default function Annotation() {
         </Low>
       </ContainerContent>
     </Container>
-  )
+  );
 }
