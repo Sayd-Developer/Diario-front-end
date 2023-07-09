@@ -1,27 +1,27 @@
-import LayoutAnnotation from "../layouts/LayoutAnnotation"
-import LayoutHome from "../layouts/LayoutHome"
-import LayoutLogin from "../layouts/LayoutLogin"
-import LayoutSalve from "../layouts/LayoutSalve"
-import { lazy } from "react"
+import LayoutAnnotation from "../layouts/LayoutAnnotation";
+import LayoutHome from "../layouts/LayoutHome/LayoutHome";
+import LayoutLogin from "../layouts/LayoutLogin";
+import LayoutSalve from "../layouts/LayoutSalve";
+import { lazy } from "react";
 
 function Private(Component: React.FC) {
-  const verify = false
+  const verify = false;
 
-  return <Component />
+  return <Component />;
 
   // return verify ? <Component /> : <Login />;
 }
 
 function VerifyLayout(Component: React.FC) {
-  const verify = true
+  const verify = true;
 
-  return verify ? <Component /> : <LayoutLogin />
+  return verify ? <Component /> : <LayoutLogin />;
 }
 
-const Login = lazy(() => import("../pages/Login"))
-const Annotation = lazy(() => import("../pages/Annotation"))
-const Home = lazy(() => import("../pages/Home"))
-const Salve = lazy(() => import("../components/Salve"))
+const Login = lazy(() => import("../pages/Login"));
+const Annotation = lazy(() => import("../pages/Annotation"));
+const Home = lazy(() => import("../pages/Home"));
+const Salve = lazy(() => import("../components/Salve"));
 
 export const routes = [
   {
@@ -44,4 +44,4 @@ export const routes = [
     element: <LayoutSalve />,
     children: [{ path: "/Salvo", element: Private(Salve) }],
   },
-]
+];

@@ -1,18 +1,14 @@
-import { Container, ContainerContent, Footer, Title } from "./style"
-import Sidebar from "../../components/Sidebar"
-import Low from "../../assets/icons/iconHomePlus.svg"
+import { Container, ContainerContent, Footer, Title } from "./style";
+import CreateButton from "./components/button/CreateButton";
 export default function Home() {
   return (
     <Container>
-      <Sidebar />
       <ContainerContent>
-        <Title>
-          <h1>Desvende sua história, uma página por vez.</h1>
-        </Title>
-        <Footer>
-          <img src={Low} alt="" />
-        </Footer>
+        <Title>Desvende sua história, uma página por vez</Title>
       </ContainerContent>
+      <Footer>
+        <CreateButton fill="black" />
+      </Footer>
     </Container>
-  )
+  );
 }
