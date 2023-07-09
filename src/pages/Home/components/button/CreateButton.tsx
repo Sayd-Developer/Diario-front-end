@@ -1,10 +1,12 @@
 interface CreateButtonProps {
   fill: "black";
+  onClick?: () => void;
 }
 
-export default function CreateButton({ fill }: CreateButtonProps) {
+export default function CreateButton({ fill, onClick }: CreateButtonProps) {
   return (
     <svg
+      onClick={onClick}
       width="80"
       height="80"
       viewBox="0 0 80 80"
