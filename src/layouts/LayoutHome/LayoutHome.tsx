@@ -1,6 +1,6 @@
-import Sidebar from "../../components/Sidebar";
-import { TemplateHome } from "./styles";
-import { Outlet } from "react-router-dom";
+import Sidebar from "../../components/Sidebar"
+import { TemplateHome } from "./styles"
+import { Outlet } from "react-router-dom"
 
 export default function LayoutApp() {
   return (
@@ -8,5 +8,5 @@ export default function LayoutApp() {
       <Sidebar />
       <Outlet />
     </TemplateHome>
-  );
+  )
 }
