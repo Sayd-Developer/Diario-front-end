@@ -1,21 +1,21 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100vh;
-  width: 270px;
+  width: 345px;
   background-color: #131313;
   display: flex;
-`
+`;
 export const ContainerContent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-`
+`;
 export const Header = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding: 10px 10px 10px 10px;
-`
+  padding: 10px;
+`;
 export const Body = styled.div`
   display: flex;
   width: 90%;
@@ -40,4 +40,4 @@ export const Body = styled.div`
     background-color: white;
     border: none;
   }
-`
+`;

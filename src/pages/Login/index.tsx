@@ -7,24 +7,15 @@ import {
   ContainerContent,
   ContainerLeft,
   ContainerInput,
-} from "./style"
+} from "./style";
 
-import DarkLogin from "../../assets/icons/iconDarkLogin.svg"
-import KeyLogin from "../../assets/icons/iconKeyLogin.svg"
-import UserLogin from "../../assets/icons/iconUserLogin.svg"
-import { useState } from "react"
-import { useNavigate } from "react-router"
+import DarkLogin from "../../assets/icons/iconDarkLogin.svg";
+import KeyLogin from "../../assets/icons/iconKeyLogin.svg";
+import UserLogin from "../../assets/icons/iconUserLogin.svg";
+import { useNavigate } from "react-router";
 
 export default function Login() {
-  const [name, setName] = useState("")
-
-  const ChangeNumber = () => {
-    // Previous Value
-    setName((previName) => previName + "")
-    setName(name + "")
-  }
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <Container>
@@ -50,7 +41,7 @@ export default function Login() {
 
             <h3>Esqueceu sua senha? Clique Aqui</h3>
           </ContainerBody>
-          <ContainerFooter onClick={() => navigate("/inicio")}>
+          <ContainerFooter onClick={() => navigate("/")}>
             <button>Entrar</button>
           </ContainerFooter>
         </ContainerContent>
@@ -60,5 +51,5 @@ export default function Login() {
         <img src={DarkLogin} alt="" />
       </ContainerImg>
     </Container>
-  )
+  );
 }
