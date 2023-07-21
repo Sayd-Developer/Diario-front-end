@@ -1,10 +1,13 @@
 import { Container, Header, Body, Footer } from "./style"
 import Arrow from "../../assets/icons/iconArrow.svg"
 import TextareaAutosize from "react-textarea-autosize"
+import { useNavigate } from "react-router"
 export default function Annotation() {
+  const navegation = useNavigate()
+
   return (
     <Container>
-      <Header>
+      <Header onClick={() => navegation("/")}>
         <img src={Arrow} />
         <p>Voltar ao início</p>
       </Header>
