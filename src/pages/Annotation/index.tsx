@@ -12,8 +12,20 @@ export default function Annotation() {
         <p>Voltar ao início</p>
       </Header>
       <Body>
-        <TextareaAutosize className="one" minRows={1} maxRows={1} cols={10} />
-        <TextareaAutosize className="two" minRows={19} rows={20} cols={10} />
+        <TextareaAutosize
+          className="one"
+          minRows={1}
+          maxRows={1}
+          cols={1}
+          style={{ resize: "none" }}
+        />
+        <TextareaAutosize
+          className="two"
+          minRows={19}
+          rows={20}
+          cols={10}
+          style={{ resize: "none" }}
+        />
       </Body>
       <Footer>
         <button>Salvar</button>
