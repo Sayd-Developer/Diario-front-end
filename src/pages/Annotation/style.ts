@@ -18,6 +18,7 @@ export const Header = styled.div`
   border-radius: 15px;
   color: #fff;
   margin-bottom: 25px;
+  cursor: pointer;
 
   img {
     width: 28px;
