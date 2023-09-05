@@ -83,3 +83,5 @@ export const Footer = styled.div`
     font-weight: 600;
   }
 `
+export const Title1 = styled.input``
+export const Title2 = styled.input``
