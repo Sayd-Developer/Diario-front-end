@@ -9,7 +9,7 @@ export default function useAnnotations(): [
   const [annotations, setAnnotations] = useState<AnnotationType[]>([]);
   useEffect(() => {
     async function getAnnotations() {
-      setAnnotations(AnnotationsService.getAll());
+      setAnnotations(await AnnotationsService.getAll());
     }
     getAnnotations();
   }, []);
