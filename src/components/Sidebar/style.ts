@@ -1,21 +1,21 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 345px;
   background-color: ${(props) => props.theme.primary2};
   display: flex;
-`
+`;
 export const ContainerContent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-`
+`;
 export const Header = styled.div`
   display: flex;
   justify-content: flex-end;
   padding: 10px;
-`
+`;
 export const Body1 = styled.div`
   display: flex;
   width: 90%;
@@ -40,7 +40,7 @@ export const Body1 = styled.div`
     background-color: white;
     border: none;
   }
-`
+`;
 export const Body2 = styled.div`
   display: flex;
   width: 90%;
@@ -65,4 +65,4 @@ export const Body2 = styled.div`
     background-color: white;
     border: none;
   }
-`
+`;
