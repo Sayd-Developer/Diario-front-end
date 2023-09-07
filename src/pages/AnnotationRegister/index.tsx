@@ -1,21 +1,22 @@
-import { Container, Header, Body1, Body2, ContainerContent } from "./style"
+import useAnnotations from "@/hooks/useAnnotations";
+import { Container, Header, Body, ContainerContent } from "./style";
 
 export default function AnnotationRegister() {
+  const [annotations] = useAnnotations();
   return (
     <Container>
-      <Header>
-        <h1>Registro de Anotações</h1>
-      </Header>
+      <Header>Registro de Anotações</Header>
       <ContainerContent>
-        <Body1>
-          <h1>Data:</h1>
-          <h1>Conteúdo:</h1>
-        </Body1>
-        <Body2>
-          <h1>Data:</h1>
-          <h1>Conteúdo:</h1>
-        </Body2>
+        {annotations.map((annotation) => (
+          <Body key={annotation.id}>
+            <h2>Data:</h2>
+            <p>{annotation.date.toString()}</p>
+            <h3>Conteúdo:</h3>
+            <p>{annotation.description}</p>
+            <hr style={{ border: ".5px solid red", width: "100%" }} />
+          </Body>
+        ))}
       </ContainerContent>
     </Container>
-  )
+  );
 }
