@@ -1,6 +1,6 @@
-import { Container, Header, Body, Footer, Title1, Title2 } from "./style"
+import { Container, Header, Body, Footer } from "./style"
 import Arrow from "../../assets/icons/iconArrow.svg"
-
+import TextareaAutosize from "react-textarea-autosize"
 import { useNavigate } from "react-router"
 export default function Annotation() {
   const navegation = useNavigate()
@@ -12,15 +12,19 @@ export default function Annotation() {
         <p>Voltar ao início</p>
       </Header>
       <Body>
-        <Title1
+        <TextareaAutosize
           className="one"
+          minRows={1}
+          maxRows={1}
+          cols={1}
           style={{ resize: "none" }}
-          placeholder="Título..."
         />
-        <Title2
+        <TextareaAutosize
           className="two"
+          minRows={19}
+          rows={20}
+          cols={10}
           style={{ resize: "none" }}
-          placeholder="Conteúdo..."
         />
       </Body>
       <Footer>

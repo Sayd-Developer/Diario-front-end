@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Container = styled.div`
   height: 100vh;
   width: 345px;
-  background-color: ${(props) => props.theme.primary2};
+  background-color: #131313;
   display: flex;
 `
 export const ContainerContent = styled.div`
