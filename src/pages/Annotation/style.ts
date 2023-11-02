@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 10px;
 `
+export const Form = styled.form``
 
 export const Header = styled.div`
   display: flex;
@@ -84,4 +85,4 @@ export const Footer = styled.div`
   }
 `
 export const Title1 = styled.input``
-export const Title2 = styled.input``
+export const Title2 = styled.textarea``
