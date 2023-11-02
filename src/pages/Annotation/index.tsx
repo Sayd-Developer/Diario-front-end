@@ -34,7 +34,6 @@ export default function Annotation() {
             className="one"
             name="title1"
             title="name"
-            // style={{ resize: "none" }}
             // value={title1}
             value={form.title1}
             // onChange={(e) => settitle1(e.target.value)}
