@@ -46,7 +46,7 @@ export default function Annotation() {
             // style={{ resize: "none" }}
             // value={title2}
             value={form.title2}
-            // onChange={(e) => settitle2(e.target.value)}
+            // onChange={(e) => settitle2(e.target.value)};
             placeholder="Conteúdo..."
           />
         </Body>
