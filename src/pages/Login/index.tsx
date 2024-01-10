@@ -1,5 +1,5 @@
 import {
-  Container,
+  Form,
   ContainerBody,
   ContainerImg,
   ContainerHeader,
@@ -7,18 +7,26 @@ import {
   ContainerContent,
   ContainerLeft,
   ContainerInput,
-} from "./style";
+} from "./style"
 
-import DarkLogin from "../../assets/icons/iconDarkLogin.svg";
-import KeyLogin from "../../assets/icons/iconKeyLogin.svg";
-import UserLogin from "../../assets/icons/iconUserLogin.svg";
-import { useNavigate } from "react-router";
+import DarkLogin from "../../assets/icons/iconDarkLogin.svg"
+import KeyLogin from "../../assets/icons/iconKeyLogin.svg"
+import UserLogin from "../../assets/icons/iconUserLogin.svg"
+import { useNavigate } from "react-router"
+import { useState } from "react"
 
 export default function Login() {
-  const navigate = useNavigate();
+  const [name, setName] = useState<string>()
+  const [password, setPassword] = useState<string>()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
+  const navigate = useNavigate()
 
   return (
-    <Container>
+    <Form onSubmit={handleSubmit}>
       <ContainerLeft>
         <ContainerContent>
           <ContainerHeader>
@@ -32,11 +40,19 @@ export default function Login() {
           <ContainerBody>
             <ContainerInput>
               <img src={UserLogin} alt="" />
-              <input type="text" />
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
             </ContainerInput>
             <ContainerInput>
               <img src={KeyLogin} alt="" />
-              <input type="password" />
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </ContainerInput>
 
             <h3>Esqueceu sua senha? Clique Aqui</h3>
@@ -50,6 +66,6 @@ export default function Login() {
       <ContainerImg>
         <img src={DarkLogin} alt="" />
       </ContainerImg>
-    </Container>
-  );
+    </Form>
+  )
 }

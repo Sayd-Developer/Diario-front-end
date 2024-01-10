@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
+export const Form = styled.form`
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const ContainerLeft = styled.div`
   height: 100%;
   width: 50%;
-  background-color: #131313;
+  background-color: ${(props) => props.theme.dark.primary};
   color: #fff;
   display: flex;
 

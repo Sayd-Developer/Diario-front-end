@@ -1,7 +1,12 @@
 const Themes = {
-  primary1: "#38289D",
-  primary2: "#131313",
-  primary3: "#78087A",
-  secundary: "#FFF",
+  light: {
+    primary: "#B3B3B3",
+    secundary: "#131313",
+    white: "#fff",
+  },
+  dark: {
+    primary: "#000000",
+    secundary: "#fff",
+  },
 }
 export default Themes
